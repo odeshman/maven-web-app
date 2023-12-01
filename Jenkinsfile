@@ -16,7 +16,7 @@ pipeline {
     stage('Deploy'){
       steps{
         sshagent(['tomcat-agent']){
-            sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/project-pipeline/target/maven-web-app.war ubuntu@34.235.111.139:/opt/tomcat/webapps'
+            sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/docker-pipeline/target/maven-web-app.war ubuntu@34.235.111.139:/opt/tomcat/webapps'
         }
       }
     }
