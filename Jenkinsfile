@@ -3,7 +3,7 @@ pipeline {
     docker { image 'maven:3.8.1-adoptopenjdk-11' }
   }
   stages{
-    stage('Deploy'){
+    stage('Clone'){
       steps{
         git credentialsId: 'git-token', url: 'https://github.com/odeshman/maven-web-app.git'
       }
