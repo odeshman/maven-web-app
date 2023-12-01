@@ -18,7 +18,6 @@ pipeline {
             sh 'sleep 3600'
         }
       }
-    }
     stage('Deploy'){
       steps{
         sshagent(['tomcat-agent']){
