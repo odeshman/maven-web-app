@@ -8,7 +8,7 @@ pipeline {
         git credentialsId: 'git-token', url: 'https://github.com/odeshman/maven-web-app.git'
       }
       steps {
-	mvn clean package
+	sh 'mvn clean package'
 		}
       steps {
 	sshagent(['tomcat-agent']){
